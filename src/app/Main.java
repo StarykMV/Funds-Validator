@@ -21,7 +21,7 @@ public class Main {
     }
 
     private static void validateAmount(double balance, double withdrawal) {
-        if (balance > withdrawal) {
+        if (balance < withdrawal) {
             try {
                 throw new FundsException("Insufficient funds!");
             } catch (FundsException ex) {
